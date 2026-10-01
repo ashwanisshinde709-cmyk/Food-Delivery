@@ -1,5 +1,5 @@
 import streamlit as st
-from food_delivery_fixed import Customer, DeliveryPartner, Restaurant, MenuItem
+from Food_Delivery import Customer, DeliveryPartner, Restaurant, MenuItem
 
 st.set_page_config(
     page_title="Food Delivery OOP",
@@ -235,7 +235,7 @@ if order and partner:
 
     if st.button("Complete Delivery"):
 
-        if order._status != "Order Accepted":
+        if order._status != "Accepted":
             st.warning("Delivery partner must accept the order first.")
 
         elif entered_otp.isdigit() and len(entered_otp) == 4:
